@@ -72,7 +72,7 @@
 
             <p>
                 <label for="">Selecione a imagem</label>
-                <input name="image" type="file" accept="image/*">
+                <input name="image" type="file" accept="image/*" placeholder="Selecione a imagem">
             </p>
         </p>
         <button name="upload" type="submit">Enviar imagem</button>

@@ -96,11 +96,13 @@ a.login:hover {
 
 .animal_type {
   margin-bottom: 100px;
+  
 }
 
 #animal{
   background-color: #014C2C;
-  padding-left: 38%;
+  display: flex;
+  justify-content: center;
   overflow: hidden;
   align-items: center;
   list-style-type: none;

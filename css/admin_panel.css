@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-color: #056232;
+    padding: 10px 10px;
+    overflow: hidden;
+    align-items: center;
+    border-bottom: 5px solid #FFBC66;
+    
+  }
+  
+  .header a {
+    float: left;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+  }
+  
+  .cadastro {
+    background-color: #FF6500;
+    border-radius: 10px;
+  }
+
+  .header_right {
+    float: right;
+    padding-right: 100px;
+    padding-top: 10px;
+  }
+  
+  a.cadastro {
+    margin-left: 10px;
+    color: #ffffff;
+  }
+  
+  a.cadastro:hover {
+    opacity: 70%;
+  }
+  a.login:hover {
+    opacity: 80%;
+  }
+  
+  
+  .logo {
+    margin-top: 0px;
+    float: left;
+  }
+  
+  .logo img {
+    width: 60%;
+  }
+
+
+  .form_wrapper {
+    margin-top: 10vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    
+  }
+
+h1 {
+    background: #FF6500;
+    color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.container {
+    max-width: 30vw;
+}
+
+
+
+input, select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+    outline-color: #FF6500;
+}
+
+
+button {
+    background-color: #003a21;
+    color: #18ee05;
+    border-radius: 5px;
+    padding: 6px;
+    font-weight: bolder;
+    font-size: 15px;
+    float: right;
+}
+
+
+button:hover {
+    opacity: 80%;
+}
