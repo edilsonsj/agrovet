@@ -28,7 +28,7 @@
 
     <div class="animal_type">
         <ul id="animal">
-          <li class="animal_item"><a href="adm.php">BOVINO</a></li>
+          <li class="animal_item"><a href="#">BOVINO</a></li>
           <li class="animal_item"><a href="#">EQUINO</a></li>
           <li class="animal_item"><a href="#">SUÍNO</a></li>
           <li class="animal_item"><a href="#">FERRAMENTAS</a></li>
