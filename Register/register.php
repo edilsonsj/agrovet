@@ -1,7 +1,31 @@
 <?php 
 
-    include('../agrovet/config.php');
+    include('../config.php');
     
+    if(isset($_POST['register'])) {
+        $nome = $_POST['nome'];
+        $cpf = $_POST['cpf'];
+        $data = $_POST['birthdate'];
+        $email = $_POST['email'];
+        $tel = $_POST['phone'];
+        $senha = $_POST['password'];
+
+        $query = "INSERT INTO agrovet.user(`name`, `taxp`, `birthdate`, `email`, `password`, `phone`) VALUES ('$nome', '$cpf', '$data', '$email', '$senha', '$tel')";
+
+        $result = mysqli_query($conn, $query);
+
+       if ($result) {
+        echo
+        "
+        <script>
+            alert('Cadastro realizado com sucesso');
+            document.location.href = '../home.php';
+        </script>
+        ";
+       }else {
+        echo mysqli_error($conn);
+       }
+    }
 
 
 ?>
@@ -21,7 +45,7 @@
     
 
     <div class="header">
-      <a href="home.php" class="hlogo"><img src="../agrovet/images/logo_extended.png" alt=""></a>
+      <a href="../home.php" class="hlogo"><img src="../images/logo_extended.png" alt=""></a>
       <div class="header_right">
         <a class="login" href="#login">LOGIN</a>
         <a class="cadastro" href="#cadastro">CADASTRO</a>
@@ -31,23 +55,23 @@
 
 
     <div id="main" >
-        <form id="box" action="process.php" method="POST">
+        <form id="box" action="" method="POST">
             <div id="All">
                 <div id="register">CADASTRE-SE</div>
                     <div>
-                        <input type="text" name="name" id="nameRegister" placeholder="Nome" required>
+                        <input type="text" name="nome" id="nameRegister" placeholder="Nome" required>
 
                         <input type="text" name="cpf" id="tax" placeholder="CPF" required>
 
                         <br>
                         <label class="data" for="date">Data de nascimento</label><br>
-                        <input class="data" type="date" name="birthdate" id="birthdate" placeholder="Data de Nascimento" required>
+                        <input class="data" type="date" name="birthdate" id="birthdate" placeholder="Data de Nascimento">
                         <br>
                         <input type="email" name="email" id="emailRegister" placeholder="Email" required>
                         <input type="tel" name="phone" id="phoneRegister" placeholder="Telefone" required>
                         <input type="password" name="password" id="passwordRegister" placeholder="Senha" required>
                     </div>
-                <button type="submit" id="continueButton">CRIAR CONTA</button>
+                <button name="register" type="submit" id="continueButton">CRIAR CONTA</button>
             </div>
         </form>
     </div>

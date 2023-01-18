@@ -17,26 +17,29 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="header">
-      <a href="home.php" class="logo"><img src="images/logo_extended.png" alt=""></a>
-      <div class="header_right">
-        <a class="login" href="#login">LOGIN</a>
-        <a class="cadastro" href="#cadastro">CADASTRO</a>
-        <a class="adm" href="admin_panel.php">ADM</a>
-      </div>      
-    </div>
+    
+    <div class="nav">
+      <div class="header">
+        <a href="home.php" class="logo"><img src="images/logo_extended.png" alt=""></a>
+        <div class="header_right">
+          <a class="login" href="login/login.html">LOGIN</a>
+          <a class="cadastro" href="Register/register.php">CADASTRO</a>
+          <a class="adm" href="admin_panel.php">ADM</a>
+        </div>      
+      </div>
 
-    <div class="animal_type">
-        <ul id="animal">
-          <li class="animal_item"><a href="#">BOVINO</a></li>
-          <li class="animal_item"><a href="#">EQUINO</a></li>
-          <li class="animal_item"><a href="#">SUÍNO</a></li>
-          <li class="animal_item"><a href="#">FERRAMENTAS</a></li>
-          <li class="animal_item"><a href="#">PET</a></li>
-          <li class="animal_item"><a href="#">SUÍNO</a></li>
-          <li class="animal_item"><a href="#">FERRAMENTAS</a></li>
-          <li class="animal_item"><a href="#">PET</a></li>
-        </ul>
+      <div class="animal_type">
+          <ul id="animal">
+            <li class="animal_item"><a href="#">BOVINO</a></li>
+            <li class="animal_item"><a href="#">EQUINO</a></li>
+            <li class="animal_item"><a href="#">SUÍNO</a></li>
+            <li class="animal_item"><a href="#">FERRAMENTAS</a></li>
+            <li class="animal_item"><a href="#">PET</a></li>
+            <li class="animal_item"><a href="#">SUÍNO</a></li>
+            <li class="animal_item"><a href="#">FERRAMENTAS</a></li>
+            <li class="animal_item"><a href="#">PET</a></li>
+          </ul>
+      </div>
     </div>
 
     
@@ -61,6 +64,10 @@
     </div>
       </div>
 
+    <div class="footer">
+        Cardoso Agrovet  © 2022 - Todos os direitos reservados<br>
+        Rua Alexandre Ferreira, 48 - Barão de Camaçari, Catu CEP: 48110-000 - CNPJ: 47.845.005/0001-89
+    </div>
 
 </body>
 </html>
