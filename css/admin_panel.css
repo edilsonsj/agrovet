@@ -67,7 +67,7 @@ body {
   .form_wrapper {
     margin-top: 10vh;
     width: 100%;
-
+    margin-bottom: 100px;
     display: flex;
     justify-content: center;
     
@@ -83,7 +83,8 @@ h1 {
 }
 
 .container {
-    max-width: 30vw;
+    min-width: 50vw;
+    max-width: 50vw;
 }
 
 
@@ -104,9 +105,14 @@ button {
     font-weight: bolder;
     font-size: 15px;
     float: right;
+    margin-bottom: 0px;
 }
 
 
 button:hover {
     opacity: 80%;
+}
+
+label {
+  font-size: 12px;
 }

@@ -9,6 +9,8 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background: #F8F8F8;
+  
 }
 
 .header {
@@ -95,7 +97,7 @@ a.login:hover {
 }
 
 .animal_type {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   
 }
 
@@ -130,21 +132,22 @@ a.login:hover {
 
 
 .product_wrapper {
-  max-width: 1300px;
+  max-width: 100vw;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  margin-left: 20%;
-  margin-right: 15%;
+  grid-template-columns: repeat(auto-fill, minmax(177px, 20px));
   justify-content: space-around;
   margin-bottom: 200px;
-  gap: 20px;
+  gap: 0px 30px;
+  justify-content: center;
+  margin-left: 20vw;
+  margin-right: 20vw;
   
 }
 
 .product_item {
   height: 250px;
-  width: 220px;
+  width: 195px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -153,6 +156,7 @@ a.login:hover {
   border: 1px solid rgb(236, 236, 236);
   padding-bottom: 0px;
   margin-bottom: 10px;
+  background: #ffffff;
 }
 
 .product_item:hover {
@@ -168,7 +172,7 @@ a.login:hover {
 }
 
 .product_item_content img {
-  width: 45%;
+  width: 13vh;
 }
 
 
@@ -182,9 +186,10 @@ a.login:hover {
   border: none;
   text-align: center;
   margin: 10px 10px 10px 10px;
-  margin-bottom: 0px;
-  padding: 2px 70px 2px 70px;
-  float: inline-end;
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding: 3px 55px 3px 55px;
+  justify-self: end;
 }
 
 .product_wrapper button:hover {
@@ -194,13 +199,15 @@ a.login:hover {
 }
 
 .product_name h3 {
+  min-height: 4vh;
+  min-width: 100%;
   font-size: 13px;
   opacity: 50%;
   margin-top: 0px;
   margin-bottom: 0px;
   display: -webkit-box;
     max-width: 180px;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-transform: uppercase;
@@ -215,6 +222,12 @@ a.login:hover {
   margin-top: 10px;
   margin-bottom: 0px;
   font-size: 18px;
+  padding-bottom: 0px;
 }
 
-
+.filter {
+  max-width: 100vw;
+  background: royalblue;
+  display: inline-block;
+  height: 4vh;
+}

@@ -15,7 +15,7 @@
     
     if($_FILES["image"]["error"] === 4) {
         echo   
-        "<script> alert('Imagem inexistente'); </script>";
+        "<script> alert('Produto não cadastrado (imagem não foi inserida)'); </script>";
     } else {
         $file_name = $_FILES["image"]["name"];
         $file_size = $_FILES["image"]["size"];
@@ -47,7 +47,7 @@
                 "
                 <script>
                     alert('Produto adicionado com sucesso');
-                    document.location.href = 'index_copy.php';
+                    document.location.href = 'home.php';
                 </script>
                 ";
         }
@@ -73,7 +73,7 @@
 </head>
 <body>
     <div class="header">
-        <a href="index_copy.php" class="logo"><img src="images/logo_extended.png" alt=""></a>
+        <a href="home.php" class="logo"><img src="images/logo_extended.png" alt=""></a>
         <div class="header_right">
         <a class="cadastro" href="#">Minha Conta</a>
         </div>      
@@ -84,16 +84,16 @@
 
             <form method="POST" id="box" enctype="multipart/form-data">
                 <h1>CADASTRO DE PRODUTO</h1>
-                <input name="name" type="text" placeholder="nome do produto" required>
+                <input name="name" type="text" placeholder="nome do produto" required autocomplete="off">
 
-                <input name="preco" type="number" placeholder="preço" step="0.01" id="preco" required>
+                <input name="preco" type="number" placeholder="preço" step="0.01" id="preco" required autocomplete="off">
 
-                <input name="descricao" type="text" placeholder="descrição">
-                <input name="indicacao" type="text" placeholder="indicação">
-                <input name="modo" type="text" placeholder="modo de uso">
-                <input name="fabricante" type="text" placeholder="fabricante">
-                <input name="formula" type="text" placeholder="formula">
-                <input name="carencia" type="text" placeholder="período de carência">
+                <input name="descricao" type="text" placeholder="descrição" required autocomplete="off">
+                <input name="indicacao" type="text" placeholder="indicação" required autocomplete="off">
+                <input name="modo" type="text" placeholder="modo de uso" autocomplete="off">
+                <input name="fabricante" type="text" placeholder="fabricante" required autocomplete="off">
+                <input name="formula" type="text" placeholder="formula" required autocomplete="off">
+                <input name="carencia" type="text" placeholder="período de carência"  required autocomplete="off">
 
                 <label for="unidade_medida">Unidade de Medida:</label>
                 <select name="unidade" id="unidade_medida">
@@ -104,10 +104,10 @@
                     <option value="kg">quilo (kg)</option>
                 </select>
 
-                <input name="volume" type="number" placeholder="volume" step="0.01">
+                <input name="volume" type="number" placeholder="volume" step="0.01" autocomplete="off">
                 
                 <label for="image">Selecione a imagem:</label>
-                <input name="image" type="file" accept="image/*" placeholder="Selecione a imagem">
+                <input name="image" type="file" accept="image/*" placeholder="Selecione a imagem" required>
 
                 <button name="upload" type="submit">CADASTRAR PRODUTO</button>
 
