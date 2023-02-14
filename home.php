@@ -1,3 +1,5 @@
+
+
 <?php 
   include("config.php");
 
@@ -24,7 +26,7 @@
         <div class="header_right">
           <a class="login" href="login/login.html">LOGIN</a>
           <a class="cadastro" href="Register/register.php">CADASTRO</a>
-          <a class="adm" href="admin_panel.php">ADM</a>
+          <a class="adm" href="../agrovet/admin/admin_panel.php">ADM</a>
         </div>      
       </div>
 

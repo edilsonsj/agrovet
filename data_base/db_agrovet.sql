@@ -154,20 +154,19 @@ DROP TABLE IF EXISTS `agrovet`.`product_test` ;
 CREATE TABLE IF NOT EXISTS `agrovet`.`product_test` (
 	
 	`idproduct` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	  `product_name` VARCHAR(45) NOT NULL,
-	  `sale_price` DECIMAL(10,2) NOT NULL,
-	  `type` DECIMAL(10,2) NOT NULL,
-	  `description` VARCHAR(1000) NULL,
-	  `indication` VARCHAR(45) NULL,
-	  `mode of use` VARCHAR(1000) NOT NULL,
-	  `brand` VARCHAR(45) NOT NULL,
-	  `formula` VARCHAR(50) NULL,
-	  `grace_period` VARCHAR(1000) NULL,
-      
-	  `image_path` varchar(100),
-	  `insert_date` timestamp NOT NULL,
-	  PRIMARY KEY (`idproduct`))
-ENGINE = InnoDB;
+	`product_name` VARCHAR(45) NOT NULL,
+	`sale_price` DECIMAL(10,2) NOT NULL,
+  `measurement_unit` VARCHAR(20) NOT NULL,
+	`volume` DECIMAL(10,2) NOT NULL,
+	`description` VARCHAR(1000) NULL,
+	`indication` VARCHAR(45) NULL,
+	`mode of use` VARCHAR(1000) NOT NULL,
+	`brand` VARCHAR(45) NOT NULL,
+	`formula` VARCHAR(50) NULL,
+	`grace_period` VARCHAR(1000) NULL,
+    
+	`image_path` varchar(100),
+	`insert_date` timestamp NOT NULL);
 
 
 

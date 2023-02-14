@@ -67,7 +67,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel ADMIN</title>
-    <link rel="stylesheet" href="css/admin_panel.css">
+    <link rel="stylesheet" href="../css/admin_panel.css">
     <link rel="icon" href="images/logo.png" type="image/x-icon">
 
 </head>
