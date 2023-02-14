@@ -25,7 +25,7 @@
         <a href="home.php" class="logo"><img src="images/logo_extended.png" alt=""></a>
         <div class="header_right">
           <a class="login" href="login/login.html">LOGIN</a>
-          <a class="cadastro" href="Register/register.php">CADASTRO</a>
+          <a class="cadastro" href="register/register.php">CADASTRO</a>
           <a class="adm" href="../agrovet/admin/admin_panel.php">ADM</a>
         </div>      
       </div>
