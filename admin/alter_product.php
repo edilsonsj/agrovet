@@ -39,7 +39,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALTERAR PRODUTO</title>
     <link rel="stylesheet" href="../css/admin_panel.css">
-    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="icon" href="images/icons/logo.png" type="image/x-icon">
 
 </head>
 <body>
@@ -60,15 +60,21 @@
 
             <form method="POST" id="box" enctype="multipart/form-data">
                 <h1>ALTERAR PRODUTO</h1>
+                <label for="name">Nome do prodruto</label>
                 <input name="name" type="text" required autocomplete="off" value="<?php echo $row['product_name'] ?>">
-
+                <label for="">Preço</label>
                 <input name="preco" type="number" step="0.01" id="preco" required autocomplete="off" value="<?php echo $row['sale_price'] ?>">
-
+                <label for="">Descrição</label>
                 <input name="descricao" type="text" required autocomplete="off" value="<?php echo $row['description'] ?>">
+                <label for="">Indicação</label>
                 <input name="indicacao" type="text" required autocomplete="off" value="<?php echo $row['indication'] ?>">
+                <label for="">Modo de uso</label>
                 <input name="modo" type="text" autocomplete="off" value="<?php echo $row['mode of use'] ?>">
+                <label for="">Fabricante</label>
                 <input name="fabricante" type="text" required autocomplete="off" value="<?php echo $row['brand'] ?>">
+                <label for="">Fórmula</label>
                 <input name="formula" type="text" required autocomplete="off" value="<?php echo $row['formula'] ?>">
+                <label for="">Período de carência</label>
                 <input name="carencia" type="text"  required autocomplete="off" value="<?php echo $row['grace_period'] ?>">
 
                 <label for="unidade_medida">Unidade de Medida:</label>
@@ -78,7 +84,7 @@
                     <option value="g">grama (g)</option>
                     <option value="kg">quilo (kg)</option>
                 </select>
-
+                <label for="">Volume</label>
                 <input name="volume" type="number" step="0.01" autocomplete="off" value="<?php echo $row['volume'] ?>">
                 
                 <label for="image">Selecione a imagem:</label>

@@ -1,11 +1,11 @@
-
-
 <?php 
   include("config.php");
 
   $consulta = "SELECT p.product_name, p.sale_price, p.image_path FROM product_test p";
 
-  $con = $mysqli->query($consulta) or die($mysqli->error);  
+  $con = $mysqli->query($consulta) or die($mysqli->error);
+
+  include('protect.php');
 ?>
 
 <!DOCTYPE html>
@@ -15,19 +15,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardoso Agrovet</title>
-    <link rel="icon" href="images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/icons/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/homeUser.css">
 </head>
 <body>
     
     <div class="nav">
       <div class="header">
-        <a href="home.php" class="logo"><img src="images/logo_extended.png" alt=""></a>
+        <a href="home.php" class="logo"><img src="images/icons/logo_extended.png" alt=""></a>
         <div class="header_right">
-          <a class="login" href="login/login.php">LOGIN</a>
-          <a class="cadastro" href="register/register.php">CADASTRO</a>
-          <a class="adm" href="../agrovet/admin/admin_panel.php">ADM</a>
-        </div>      
+          <a class="update" href="update_user/update_user.php">ALTERE SEUS DADOS</a>
+          <a class="carrinho" href="">
+            <img id="carrinhoImage" src="images/icons/carrinho.png" alt="imagem de carrinho" >
+             CARRINHO </a>
+        </div>
       </div>
 
       <div class="animal_type">
@@ -38,17 +39,12 @@
             <li class="animal_item"><a href="#">FERRAMENTAS</a></li>
             <li class="animal_item"><a href="#">PET</a></li>
             <li class="animal_item"><a href="#">SUÍNO</a></li>
-            <li class="animal_item"><a href="#">FERRAMENTAS</a></li>
             <li class="animal_item"><a href="#">PET</a></li>
           </ul>
       </div>
     </div>
 
-    
-
     <div class="product_wrapper">
-
-
     
       <?php while($dado = $con->fetch_array()){ ?>
           <div class="product_item">

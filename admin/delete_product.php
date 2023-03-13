@@ -4,7 +4,13 @@
     $sql = "DELETE  FROM `product_test` WHERE idproduct = $id";
     $result = mysqli_query($conn, $sql);
     if ($result) {
-        header("Location: manage_products.php");
+        echo
+                "
+                <script>
+                    alert('Produto excluido com sucesso');
+                    document.location.href = '../home.php';
+                </script>
+                ";
     } else {
         echo "Falha: " . mysqli_error($conn);
     }

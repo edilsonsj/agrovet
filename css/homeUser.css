@@ -14,7 +14,6 @@ body {
 }
 
 .nav{
-
   top: 0;
   width: 100vw;
   margin-bottom: 0%;
@@ -25,7 +24,6 @@ body {
   padding: 10px 10px;
   overflow: hidden;
   align-items: center;
-  
 }
 
 .header a {
@@ -39,41 +37,21 @@ body {
   font-weight: bolder;
 }
 
-
-.login {
+.update, .carrinho {
   background-color: #FF6500;
   border-radius: 10px;
+  margin-right: 1vw;
 }
 
-.login:hover {
+.update:hover, .carrinho:hover{
   color: white;
 }
 
-
-.cadastro {
-  background-color: #003a21;
-  border-radius: 10px;
+#carrinhoImage{
+    width: 20px;
+    height: 15px;
+    padding: 0;
 }
-
-.adm {
-  background-color: #003a21;
-  border-radius: 10px;
-}
-
-.cadastro a{
-  color: #4BEB35;
-  margin-left: 10px;
-}
-
-a.adm{
-  color: #4BEB35;
-  margin-left: 10px;
-}
-
-a.adm:hover{
-  opacity: 60%;
-}
-
 
 .header_right {
   float: right;
@@ -81,18 +59,9 @@ a.adm:hover{
   padding-top: 10px;
 }
 
-a.cadastro {
-  margin-left: 10px;
-  color: #f4fff3;
-}
-
-a.cadastro:hover {
-  opacity: 70%;
-}
-a.login:hover {
+a.update:hover, a.carrinho:hover {
   opacity: 80%;
 }
-
 
 .logo {
   margin-top: 0px;
@@ -136,21 +105,18 @@ a.login:hover {
   box-shadow:  0 0 15px #FF6500;
 }
 
-
-
 .product_wrapper {
   max-width: 100vw;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 20px));
+  grid-template-columns: repeat(auto-fill, minmax(177px, 20px));
   justify-content: space-around;
   margin-bottom: 200px;
-  gap: 30px 30px;
+  gap: 0px 30px;
   justify-content: center;
   margin-left: 20vw;
   margin-right: 20vw;
   position: relative;
-  
 }
 
 .product_item {
@@ -180,9 +146,8 @@ a.login:hover {
 }
 
 .product_item_content img {
-  width: 10vh;
+  width: 13vh;
 }
-
 
 .product_wrapper button{
   text-decoration: none;
@@ -193,8 +158,11 @@ a.login:hover {
   font-weight: 600;
   border: none;
   text-align: center;
+  margin: 10px 10px 10px 10px;
+  margin-bottom: 0;
+  margin-top: 10px;
   padding: 3px 55px 3px 55px;
-
+  justify-self: end;
 }
 
 .product_wrapper button:hover {
@@ -218,9 +186,6 @@ a.login:hover {
     text-transform: uppercase;
 }
 
-
-
-
 .product_item h1 {
   color: #FF6500;
   font-weight: bolder;
@@ -236,8 +201,6 @@ a.login:hover {
   display: inline-block;
   height: 4vh;
 }
-
-
 
 .footer{
   width: 100%;

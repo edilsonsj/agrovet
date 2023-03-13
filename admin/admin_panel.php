@@ -38,7 +38,7 @@
             $new_image_name = uniqid();
             $new_image_name .= '.' . $image_extension;
             
-            move_uploaded_file($tmp_name, 'product_images/' . $new_image_name);
+            move_uploaded_file($tmp_name, '../images/product_images/' . $new_image_name);
 
             $query = "INSERT INTO product_test(`product_name`, `sale_price`, `measurement_unit`, `volume`, `description`, `indication`, `mode of use`, `brand`, `formula`, `grace_period`, `image_path`)  values('$nome', '$preco', '$unidade', '$volume', '$descricao', '$indicacao', '$modo', '$fabricante', '$formula', '$carencia','$new_image_name')";
             mysqli_query($conn, $query);
@@ -47,7 +47,7 @@
                 "
                 <script>
                     alert('Produto adicionado com sucesso');
-                    document.location.href = 'home.php';
+                    document.location.href = '../home.php';
                 </script>
                 ";
         }
@@ -68,14 +68,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel ADMIN</title>
     <link rel="stylesheet" href="../css/admin_panel.css">
-    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="icon" href="images/icons/logo.png" type="image/x-icon">
 
 </head>
 <body>
     <div class="header">
         <a href="home.php" class="logo"><img src="images/logo_extended.png" alt=""></a>
         <div class="header_right">
-        <a class="cadastro" href="#">Minha Conta</a>
+        <a href="manage_products.php" class="cadastro">GERENCIAR PRODUTOS</a>
         </div>      
     </div>
 
