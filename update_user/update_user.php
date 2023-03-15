@@ -13,7 +13,7 @@ if (isset($_POST['register'])) {
     $senha = $_POST['pass'];
 
     $query = "UPDATE `user` 
-    SET `name`='$nome',`taxp`='$cpf',`birthdate`='$data',`email`='$email',`pass`='$senha',`phone`='$tel' WHERE '$id' = `iduser`";
+    SET `name`='$nome',`taxp`='$cpf',`birthdate`='$data',`email`='$email',`password`='$senha',`phone`='$tel' WHERE '$id' = `iduser`";
 
     $result = mysqli_query($conn, $query);
 
@@ -21,8 +21,8 @@ if (isset($_POST['register'])) {
         echo
         "
         <script>
-            alert('Cadastro realizado com sucesso');
-            document.location.href = '../home.php';
+            alert('Atualização de cadastro realizada com sucesso');
+            document.location.href = '../homeUser.php';
         </script>
         ";
     } else {
@@ -46,16 +46,12 @@ if (isset($_POST['register'])) {
 </head>
 
 <body>
-    <nav class="navBar">
-        <a href="" class="logo">CARDOSO <b style="background-color: #FF6500; border-radius: 4px; padding: 3px;">AGROVET</b></a>
-        <ul>
-            <li><img src="/images/icons/perfil.png" alt="" class="personIcon"></li>
-            <div id="loginIcons">
-                Faça <b>LOGIN</b><br>
-                ou faça seu <b>CADASTRO</b>
-            </div>
-        </ul>
-    </nav>
+    <div class="header">
+        <a href="../homeUser.php" class="hlogo"><img src="../images/icons/logo_extended.png" alt=""></a>
+        <div class="header_right">
+        </div>
+    </div>
+
     <?php 
         $id = $_GET['iduser'];
         $sql = "SELECT * FROM `user` WHERE iduser = $id";
@@ -72,11 +68,11 @@ if (isset($_POST['register'])) {
                     <br>
                     <label class="data" for="date">Data de nascimento</label><br>
                     <input class="data" type="date" name="birthdate" id="birthdate" placeholder="Data de Nascimento"
-                    value="<?php echo $row['birthdate'] ?>
+                    value="<?php echo $row['birthdate'] ?>">
                     <br>
                     <input type="email" name="email" id="emailRegister" value="<?php echo $row['email'] ?>" required>
                     <input type="tel" name="phone" id="phoneRegister" value="<?php echo $row['phone'] ?>" required>
-                    <input type="password" name="pass" id="passwordRegister" placeholder="password" required>
+                    <input type="password" name="pass" id="passwordRegister" placeholder="password" value="<?php echo $row['password'] ?>" required>
                 </div>
             </div>
             <button name="register" type="submit" id="continueButton">CONCLUIR</button>

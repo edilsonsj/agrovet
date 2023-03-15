@@ -1,5 +1,6 @@
 <?php 
   include("config.php");
+  
 
   $consulta = "SELECT p.product_name, p.sale_price, p.image_path FROM product_test p";
 
@@ -24,10 +25,10 @@
       <div class="header">
         <a href="home.php" class="logo"><img src="images/icons/logo_extended.png" alt=""></a>
         <div class="header_right">
-          <a class="update" href="update_user/update_user.php">ALTERE SEUS DADOS</a>
+          <a class="update" href="update_user/update_user.php?iduser=<?php echo $_SESSION['iduser']?>">ALTERE SEUS DADOS</a>
           <a class="carrinho" href="">
-            <img id="carrinhoImage" src="images/icons/carrinho.png" alt="imagem de carrinho" >
-             CARRINHO </a>
+            <img id="carrinhoImage" src="images/icons/carrinho.png" alt="imagem de carrinho" > CARRINHO </a>
+            <a class="adm" href="Admin/admin_panel.php">ADM</a>
         </div>
       </div>
 

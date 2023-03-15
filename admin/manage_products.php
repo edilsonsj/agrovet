@@ -11,9 +11,8 @@
 </head>
 <body>
     <div class="header">
-          <a href="../home.php" class="hlogo"><img src="../images/pics/logo_extended.png" alt=""></a>
+    <a href="../home.php" class="logo"><img src="../images/icons/logo_extended.png" alt=""></a>
           <div class="header_right">
-            <a class="login" href="../login/login.php">LOGIN</a>
             <a class="adm" href="../admin/admin_panel.php">ADM</a>
           </div>      
     </div>
