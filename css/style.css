@@ -249,3 +249,21 @@ a.login:hover {
   bottom: 0;
   position: fixed;
 }
+
+.product_wrapper button a{
+  text-decoration: none;
+  text-decoration: none;
+  background-color: #FF6500;
+  border-radius: 5px;
+  font-size: 14px;
+  color: white;
+  font-weight: 600;
+  border: none;
+  text-align: center;
+  padding: 3px 5px 3px 5px;
+}
+
+button a:hover{
+  opacity: 80%;
+  box-shadow:  0 0 15px #FF6500;
+}

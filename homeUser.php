@@ -2,7 +2,7 @@
   include("config.php");
   
 
-  $consulta = "SELECT p.product_name, p.sale_price, p.image_path FROM product_test p";
+  $consulta = "SELECT p.idproduct, p.product_name, p.sale_price, p.image_path FROM product_test p";
 
   $con = $mysqli->query($consulta) or die($mysqli->error);
 
@@ -55,7 +55,7 @@
                 <h3><?php echo $dado["product_name"]; ?></h3>
               </div>
               <h1>R$<?php echo $dado["sale_price"]; ?></h1>
-              <button>COMPRAR</button>
+              <button><a href="product_detail/product_detail.php?id=<?php echo $dado['idproduct']?>">COMPRAR</a></button>
             </div>
           </div>
 

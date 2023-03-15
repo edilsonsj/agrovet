@@ -1,11 +1,8 @@
 
 
 <?php 
-  include("config.php");
-
-  $consulta = "SELECT p.idproduct, p.product_name, p.sale_price, p.image_path FROM product_test p";
-
-  $con = $mysqli->query($consulta) or die($mysqli->error);  
+  include("../config.php");
+  $idproduct = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -16,13 +13,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardoso Agrovet</title>
     <link rel="icon" href="images/icons/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/product_detail.css">
 </head>
 <body>
     
     <div class="nav">
       <div class="header">
-        <a href="home.php" class="logo"><img src="images/icons/logo_extended.png" alt=""></a>
+        <a href="../home.php" class="logo"><img src="../images/icons/logo_extended.png" alt=""></a>
         <div class="header_right">
           <a class="login" href="login/login.php">LOGIN</a>
           <a class="cadastro" href="register/register.php">CADASTRO</a>
@@ -44,27 +41,39 @@
       </div>
     </div>
 
-    
+    <div class="container">
+        <div class="child">
+            <table>
+                <tr class="table-header">
+                    <th>NOME DO PRODUTO</th>
+                    <th>PREÇO</th>
+                    <th>UNIDADE DE MEDIDA</th>
+                    <th>VOLUME</th>
+                    <th>DESCRICAO</th>
+                    <th>AÇÃO</th>
+                </tr>
+                <?php 
+                $sql = "SELECT * FROM product_test p where idproduct = $idproduct";
+                $result = mysqli_query($conn, $sql);
+                //$con = $mysqli->query($consulta) or die($mysqli->error);
+                while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                    <tr>
+                        <th><?php echo $row['product_name'] ?></th>
+                        <th><?php echo $row['sale_price'] ?></th>
+                        <th><?php echo $row['measurement_unit'] ?></th>
+                        <th><?php echo $row['volume'] ?></th>
+                        <th><?php echo $row['description'] ?></th>
+                        <th><a id="alterar-btn" href="">ADICIONAR AO CARRINHO</a></th>
 
-    <div class="product_wrapper">
-
-
-    
-      <?php while($dado = $con->fetch_array()){ ?>
-          <div class="product_item">
-            <div class="product_item_content">
-              <img src="images/product_images/<?php echo $dado["image_path"]; ?>" alt="">
-              <div class="product_name">
-                <h3><?php echo $dado["product_name"]; ?></h3>
-              </div>
-              <h1>R$<?php echo $dado["sale_price"]; ?></h1>
-              <button><a href="product_detail/product_detail.php?id=<?php echo $dado['idproduct']?>">COMPRAR</a></button>
-            </div>
-          </div>
-
-        <?php } ?>
+                    </tr>
+                    
+                    <?php
+                }
+                ?>
+            </table>
+        </div>
     </div>
-      </div>
 
     <div class="footer">
         Cardoso Agrovet  © 2022 - Todos os direitos reservados<br>
