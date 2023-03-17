@@ -39,7 +39,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALTERAR PRODUTO</title>
     <link rel="stylesheet" href="../css/admin_panel.css">
-    <link rel="icon" href="images/icons/logo.png" type="image/x-icon">
+    <link rel="icon" href="../images/icons/logo.png" type="image/x-icon">
 
 </head>
 <body>

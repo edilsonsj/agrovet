@@ -68,12 +68,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel ADMIN</title>
     <link rel="stylesheet" href="../css/admin_panel.css">
-    <link rel="icon" href="images/icons/logo.png" type="image/x-icon">
+    <link rel="icon" href="../images/icons/logo.png" type="image/x-icon">
 
 </head>
 <body>
     <div class="header">
-        <a href="home.php" class="logo"><img src="../images/icons/logo_extended.png" alt=""></a>
+        <a href="../home.php" class="logo"><img src="../images/icons/logo_extended.png" alt=""></a>
         <div class="header_right">
         <a href="manage_products.php" class="cadastro">GERENCIAR PRODUTOS</a>
         </div>      

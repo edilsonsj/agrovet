@@ -247,7 +247,7 @@ a.login:hover {
   text-align: center;
   padding: 8px 0 8px 0;
   bottom: 0;
-  position: fixed;
+  position: relative;
 }
 
 .product_wrapper button a{
