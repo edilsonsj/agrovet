@@ -58,7 +58,7 @@
                 <h3><?php echo $dado["product_name"]; ?></h3>
               </div>
               <h1>R$<?php echo $dado["sale_price"]; ?></h1>
-              <button><a href="product_detail/product_detail.php?id=<?php echo $dado['idproduct']?>">COMPRAR</a></button>
+              <button><a href="product_detail/product_detail_copy.php?id=<?php echo $dado['idproduct']?>">COMPRAR</a></button>
             </div>
           </div>
 

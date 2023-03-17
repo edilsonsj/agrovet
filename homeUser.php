@@ -5,8 +5,8 @@
   $consulta = "SELECT p.idproduct, p.product_name, p.sale_price, p.image_path FROM product_test p";
 
   $con = $mysqli->query($consulta) or die($mysqli->error);
-
   include('protect.php');
+  print_r($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +26,7 @@
         <a href="home.php" class="logo"><img src="images/icons/logo_extended.png" alt=""></a>
         <div class="header_right">
           <a class="update" href="update_user/update_user.php?iduser=<?php echo $_SESSION['iduser']?>">ALTERE SEUS DADOS</a>
-          <a class="carrinho" href="">
+          <a class="carrinho" href="cart/cart.php?iduser=<?php echo $_SESSION['iduser']?>">
             <img id="carrinhoImage" src="images/icons/carrinho.png" alt="imagem de carrinho" > CARRINHO </a>
             <a class="adm" href="Admin/admin_panel.php">ADM</a>
         </div>
@@ -55,7 +55,7 @@
                 <h3><?php echo $dado["product_name"]; ?></h3>
               </div>
               <h1>R$<?php echo $dado["sale_price"]; ?></h1>
-              <button><a href="product_detail/product_detail.php?id=<?php echo $dado['idproduct']?>">COMPRAR</a></button>
+              <button><a href="product_detail/product_detail_copy.php?id=<?php echo $dado['idproduct']?>">COMPRAR</a></button>
             </div>
           </div>
 

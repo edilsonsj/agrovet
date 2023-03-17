@@ -24,7 +24,8 @@
                 session_start();
             }
             $_SESSION['iduser'] = $usuario['iduser'];
-            $_SESSION['name'] = $usuario['nome'];
+            $_SESSION['name'] = $usuario['name'];
+            $_SESSION['email'] = $usuario['email'];
 
             header("Location: ../homeUser.php");
          } else {
